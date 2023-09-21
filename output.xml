@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20230921 17:37:26.353" rpa="false" schemaversion="4">
+<suite id="s1" name="loginHRM" source="c:\Users\marin\OneDrive\Bureau\Mes cours Session3\Techniques d'automatisation de tests-Rabeh\seance2\loginHRM.robot">
+<test id="s1-t1" name="tc01 login test" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230921 17:37:26.958" level="INFO">Opening browser 'edge' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<msg timestamp="20230921 17:37:29.139" level="WARN">The msedgedriver version (116.0.1938.76) detected in PATH at C:\Users\marin\AppData\Local\Programs\Python\Python311\Scripts\msedgedriver.exe might not be compatible with the detected edge version (117.0.2045.36); currently, msedgedriver 117.0.2045.36 is recommended for edge 117.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20230921 17:37:26.958" endtime="20230921 17:37:36.502"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230921 17:37:36.502" endtime="20230921 17:37:36.637"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230921 17:37:39.639" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230921 17:37:36.638" endtime="20230921 17:37:39.639"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230921 17:37:39.642" level="INFO">Typing text 'Admin' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20230921 17:37:39.639" endtime="20230921 17:37:39.970"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230921 17:37:39.973" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20230921 17:37:40.045" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230921 17:37:40.170" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230921 17:37:39.972" endtime="20230921 17:37:40.171"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>class:oxd-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230921 17:37:40.173" level="INFO">Clicking button 'class:oxd-button'.</msg>
+<status status="PASS" starttime="20230921 17:37:40.172" endtime="20230921 17:37:41.732"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230921 17:37:44.734" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230921 17:37:41.733" endtime="20230921 17:37:44.735"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]/span/h6</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230921 17:37:44.736" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+<msg timestamp="20230921 17:37:44.740" level="INFO">Verifying element 'xpath://*[@id="app"]/div[1]/div[1]/header/div[1]/div[1]/span/h6' contains exact text 'Dashboard'.</msg>
+<status status="PASS" starttime="20230921 17:37:44.736" endtime="20230921 17:37:44.797"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Xpath://p[@class="oxd-userdropdown-name"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230921 17:37:44.799" level="INFO">Clicking element 'Xpath://p[@class="oxd-userdropdown-name"]'.</msg>
+<status status="PASS" starttime="20230921 17:37:44.798" endtime="20230921 17:37:44.873"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230921 17:37:47.875" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230921 17:37:44.874" endtime="20230921 17:37:47.876"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>Link:Logout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230921 17:37:47.878" level="INFO">Clicking element 'Link:Logout'.</msg>
+<status status="PASS" starttime="20230921 17:37:47.877" endtime="20230921 17:37:49.053"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230921 17:37:52.055" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230921 17:37:49.054" endtime="20230921 17:37:52.055"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>class:oxd-button</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230921 17:37:52.098" level="INFO">Element 'class:oxd-button' is displayed.</msg>
+<status status="PASS" starttime="20230921 17:37:52.056" endtime="20230921 17:37:52.099"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230921 17:37:52.099" endtime="20230921 17:37:54.704"/>
+</kw>
+<status status="PASS" starttime="20230921 17:37:26.925" endtime="20230921 17:37:54.706"/>
+</test>
+<status status="PASS" starttime="20230921 17:37:26.365" endtime="20230921 17:37:54.708"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="loginHRM">loginHRM</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230921 17:37:29.139" level="WARN">The msedgedriver version (116.0.1938.76) detected in PATH at C:\Users\marin\AppData\Local\Programs\Python\Python311\Scripts\msedgedriver.exe might not be compatible with the detected edge version (117.0.2045.36); currently, msedgedriver 117.0.2045.36 is recommended for edge 117.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20230921 17:37:44.736" level="WARN">Keyword 'Element Text Should Be' found both from a custom library 'SeleniumLibrary' and a standard library 'XML'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Element Text Should Be' or 'XML.Element Text Should Be'.</msg>
+</errors>
+</robot>
